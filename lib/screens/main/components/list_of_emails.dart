@@ -38,7 +38,7 @@ class _ListOfEmailsState extends State<ListOfEmails> {
           right: false,
           child: Column(
             children: [
-              // This is our Seearch bar
+              // This is our Search bar
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -109,24 +109,23 @@ class _ListOfEmailsState extends State<ListOfEmails> {
               ),
               SizedBox(height: kDefaultPadding),
               Expanded(
-                child: ListView.builder(
-                  itemCount: emails.length,
-                  // On mobile this active dosen't mean anything
-                  itemBuilder: (context, index) => EmailCard(
-                    isActive: Responsive.isMobile(context) ? false : index == 0,
-                    email: emails[index],
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              EmailScreen(email: emails[index]),
-                        ),
-                      );
-                    },
-                  ),
+                  child: ListView.builder(
+                itemCount: emails.length,
+                // On mobile this active dosen't mean anything
+                itemBuilder: (context, index) => EmailCard(
+                  pIndex: index,
+                  isActive: Responsive.isMobile(context) ? false : index == 0,
+                  email: emails[index],
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EmailScreen(email: emails[index]),
+                      ),
+                    );
+                  },
                 ),
-              ),
+              )),
             ],
           ),
         ),

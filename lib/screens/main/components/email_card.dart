@@ -11,11 +11,15 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 class ProgressBar extends StatelessWidget {
   // const ProgressBar({ Key? key }) : super(key: key);
   final Email time;
+  final int progressValueI;
 
-  const ProgressBar({Key key, this.time}) : super(key: key);
+  const ProgressBar({Key key, this.time, this.progressValueI})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    var progressValue = emails[0].time;
+    var progressValue = emails[progressValueI].time.toInt();
+    print(progressValueI);
     return Container(
       height: 45,
       width: 45,
@@ -77,10 +81,12 @@ class EmailCard extends StatelessWidget {
     this.isActive = true,
     this.email,
     this.press,
+    this.pIndex,
   }) : super(key: key);
 
   final bool isActive;
   final Email email;
+  final int pIndex;
 
   final VoidCallback press;
 
@@ -108,7 +114,7 @@ class EmailCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ProgressBar(),
+                          ProgressBar(progressValueI: pIndex),
                           // SizedBox(
                           //   width: 32,
                           //   child: CircleAvatar(
