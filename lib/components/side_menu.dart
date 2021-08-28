@@ -10,10 +10,22 @@ import 'tags.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 
-class SideMenu extends StatelessWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({
     Key key,
   }) : super(key: key);
+
+  @override
+  _SideMenuState createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  bool btn1 = true;
+  bool btn2 = false;
+  bool btn3 = false;
+  bool btn4 = false;
+  var currentState = "";
+  moveReports(BuildContext context) {}
 
   @override
   Widget build(BuildContext context) {
@@ -109,30 +121,58 @@ class SideMenu extends StatelessWidget {
               SizedBox(height: kDefaultPadding * 0.5),
               // Menu Items
               SideMenuItem(
-                press: () {},
+                press: () {
+                  setState(() {
+                    btn1 = true;
+                    btn2 = false;
+                    btn3 = false;
+                    btn4 = false;
+                  });
+                },
                 title: "Works",
                 iconSrc: "assets/Icons/Works.svg",
-                isActive: true,
+                isActive: btn1,
                 // itemCount: 3,
               ),
               SideMenuItem(
-                press: () {},
+                press: () {
+                  setState(() {
+                    btn1 = false;
+                    btn2 = true;
+                    btn3 = false;
+                    btn4 = false;
+                  });
+                },
                 title: "Reports",
                 iconSrc: "assets/Icons/Reports.svg",
-                isActive: false,
+                isActive: btn2,
                 // itemCount: 3,
               ),
               SideMenuItem(
-                press: () {},
+                press: () {
+                  setState(() {
+                    btn1 = false;
+                    btn2 = false;
+                    btn3 = true;
+                    btn4 = false;
+                  });
+                },
                 title: "Material",
                 iconSrc: "assets/Icons/Material.svg",
-                isActive: false,
+                isActive: btn3,
               ),
               SideMenuItem(
-                press: () {},
+                press: () {
+                  setState(() {
+                    btn1 = false;
+                    btn2 = false;
+                    btn3 = false;
+                    btn4 = true;
+                  });
+                },
                 title: "Staff",
                 iconSrc: "assets/Icons/Members.svg",
-                isActive: false,
+                isActive: btn4,
                 showBorder: false,
               ),
 
