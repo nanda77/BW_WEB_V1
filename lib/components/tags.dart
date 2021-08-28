@@ -39,10 +39,10 @@ class Tags extends StatelessWidget {
           ],
         ),
         SizedBox(height: kDefaultPadding / 2),
-        buildTag(context, color: Color(0xFF23CF91), title: "Nveda Villa"),
-        buildTag(context, color: Color(0xFF3A6FF7), title: "Amaravati"),
-        buildTag(context, color: Color(0xFFF3CF50), title: "Block A"),
-        buildTag(context, color: Color(0xFF8338E1), title: "Family Home"),
+        buildTag(context, color: Color(0xFF899BAB), title: "Nveda Villa"),
+        buildTag(context, color: Color(0xFF899BAB), title: "Amaravati"),
+        buildTag(context, color: Color(0xFF899BAB), title: "Block A"),
+        buildTag(context, color: Color(0xFF899BAB), title: "Family Home"),
       ],
     );
   }
@@ -56,7 +56,7 @@ class Tags extends StatelessWidget {
         child: Row(
           children: [
             SvgPicture.asset(
-              "assets/Icons/Markup filled.svg",
+              "assets/Icons/settings.svg",
               height: 18,
               color: color,
             ),
@@ -68,6 +68,16 @@ class Tags extends StatelessWidget {
                   .button
                   .copyWith(color: kGrayColor),
             ),
+            // Spacer(),
+            // MaterialButton(
+            //   minWidth: 20,
+            //   onPressed: () {},
+            //   child: Icon(
+            //     Icons.settings,
+            //     color: Color(0xFF899BAB), //0xFF8E63E6
+            //     size: 18,
+            //   ),
+            // ), //Project settings btn
           ],
         ),
       ),

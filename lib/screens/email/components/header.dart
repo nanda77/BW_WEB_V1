@@ -65,20 +65,20 @@ class Header extends StatelessWidget {
             //   ),
             //   onPressed: () {},
             // ),
-            // IconButton(
-            //   icon: SvgPicture.asset(
-            //     "assets/Icons/Markup.svg",
-            //     width: 24,
-            //   ),
-            //   onPressed: () {},
-            // ),
             IconButton(
               icon: SvgPicture.asset(
-                "assets/Icons/More vertical.svg",
-                width: 24,
+                "assets/Icons/edit_work.svg",
+                width: 21,
               ),
               onPressed: () {},
             ),
+          IconButton(
+            icon: SvgPicture.asset(
+              "assets/Icons/dots3.svg",
+              width: 24,
+            ),
+            onPressed: () {},
+          ),
         ],
       ),
     );
