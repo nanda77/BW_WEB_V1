@@ -100,8 +100,9 @@ class _ListOfEmailsState extends State<ListOfEmails> {
                       minWidth: 20,
                       onPressed: () {},
                       child: SvgPicture.asset(
-                        "assets/Icons/Sort.svg",
-                        width: 16,
+                        "assets/Icons/plus_square.svg",
+                        color: Color(0xFF282F3F), //0xFF8E63E6
+                        width: 18,
                       ),
                     ),
                   ],

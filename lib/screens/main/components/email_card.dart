@@ -19,7 +19,6 @@ class ProgressBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var progressValue = emails[progressValueI].time.toInt();
-    print(progressValueI);
     return Container(
       height: 45,
       width: 45,
@@ -57,10 +56,10 @@ class ProgressBar extends StatelessWidget {
                   cornerStyle: CornerStyle.bothCurve,
                   gradient: const SweepGradient(colors: <Color>[
                     Color(0xFF9F2FFF),
-                    Color(0xFF0BB1D3),
+                    Color(0xFF0BB1D3), // Color(0xFF566FE9),
                   ], stops: <double>[
-                    0.25,
-                    0.75
+                    0.10,
+                    0.95,
                   ])),
               // MarkerPointer(
               //   value: 70,
