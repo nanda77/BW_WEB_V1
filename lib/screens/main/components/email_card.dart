@@ -1,8 +1,12 @@
+import 'dart:convert';
+
+import 'package:buildworks/worksmodule/models/work_titles_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:outlook/models/Email.dart';
+import 'package:buildworks/models/Email.dart';
 // import 'package:websafe_svg/websafe_svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:buildworks/models/pdfinfoDart.dart';
 
 import '../../../constants.dart';
 import '../../../extensions.dart';
@@ -19,6 +23,7 @@ class ProgressBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var progressValue = emails[progressValueI].time.toInt();
+
     return Container(
       height: 45,
       width: 45,
@@ -81,10 +86,12 @@ class EmailCard extends StatelessWidget {
     this.email,
     this.press,
     this.pIndex,
+    WorksDemo worksDemox,
   }) : super(key: key);
 
   final bool isActive;
   final Email email;
+  // final WorksDemo worksDemox;
   final int pIndex;
 
   final VoidCallback press;
