@@ -1,4 +1,4 @@
-package com.example.outlook
+package com.example.buildworks
 
 import io.flutter.embedding.android.FlutterActivity
 

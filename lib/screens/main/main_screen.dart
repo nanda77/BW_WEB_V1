@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:outlook/components/side_menu.dart';
-import 'package:outlook/responsive.dart';
-import 'package:outlook/screens/email/email_screen.dart';
+import 'package:buildworks/components/side_menu.dart';
+import 'package:buildworks/responsive.dart';
+import 'package:buildworks/screens/email/email_screen.dart';
 import 'components/list_of_emails.dart';
 
 class MainScreen extends StatelessWidget {

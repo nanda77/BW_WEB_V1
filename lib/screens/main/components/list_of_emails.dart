@@ -1,8 +1,10 @@
+import 'package:buildworks/worksmodule/models/work_titles_model.dart';
+import 'package:buildworks/worksmodule/views/components/work_title_card.dart';
 import 'package:flutter/material.dart';
-import 'package:outlook/components/side_menu.dart';
-import 'package:outlook/models/Email.dart';
-import 'package:outlook/responsive.dart';
-import 'package:outlook/screens/email/email_screen.dart';
+import 'package:buildworks/components/side_menu.dart';
+import 'package:buildworks/models/Email.dart';
+import 'package:buildworks/responsive.dart';
+import 'package:buildworks/screens/email/email_screen.dart';
 // import 'package:websafe_svg/websafe_svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -111,12 +113,14 @@ class _ListOfEmailsState extends State<ListOfEmails> {
               SizedBox(height: kDefaultPadding),
               Expanded(
                   child: ListView.builder(
-                itemCount: emails.length,
+                // itemCount: emails.length,
+                itemCount: worksDemo.length,
                 // On mobile this active dosen't mean anything
-                itemBuilder: (context, index) => EmailCard(
+                itemBuilder: (context, index) => WorkTitleCard(
                   pIndex: index,
                   isActive: Responsive.isMobile(context) ? false : index == 0,
-                  email: emails[index],
+                  // email: emails[index],
+                  worksDemox: worksDemo[index],
                   press: () {
                     Navigator.push(
                       context,

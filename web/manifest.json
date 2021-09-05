@@ -1,6 +1,6 @@
 {
-    "name": "outlook",
-    "short_name": "outlook",
+    "name": "buildworks",
+    "short_name": "buildworks",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

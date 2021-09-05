@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:outlook/constants.dart';
-import 'package:outlook/screens/main/main_screen.dart';
+// import 'package:buildworks/constants.dart';
+import 'package:buildworks/screens/main/main_screen.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:outlook/responsive.dart';
+import 'package:buildworks/responsive.dart';
 // import 'package:websafe_svg/websafe_svg.dart'; SvgPicture
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -25,6 +25,9 @@ class _SideMenuState extends State<SideMenu> {
   bool btn3 = false;
   bool btn4 = false;
   var currentState = "";
+  String iconSrc1 = "assets/Icons/works_filled.svg";
+  String iconSrc2 = "assets/Icons/Reports.svg";
+  String iconSrc3 = "assets/Icons/truck.svg";
   moveReports(BuildContext context) {}
 
   @override
@@ -56,6 +59,7 @@ class _SideMenuState extends State<SideMenu> {
     //     borderRadius: BorderRadius.circular(10),
     //   ),
     // );
+
     return Container(
       decoration: BoxDecoration(
           color: kBgSideMenuColor,
@@ -127,10 +131,13 @@ class _SideMenuState extends State<SideMenu> {
                     btn2 = false;
                     btn3 = false;
                     btn4 = false;
+                    iconSrc1 = "assets/Icons/works_filled.svg";
+                    iconSrc2 = "assets/Icons/reports.svg";
+                    iconSrc3 = "assets/Icons/truck.svg";
                   });
                 },
                 title: "Works",
-                iconSrc: "assets/Icons/Works.svg",
+                iconSrc: iconSrc1,
                 isActive: btn1,
                 // itemCount: 3,
               ),
@@ -141,10 +148,13 @@ class _SideMenuState extends State<SideMenu> {
                     btn2 = true;
                     btn3 = false;
                     btn4 = false;
+                    iconSrc1 = "assets/Icons/works.svg";
+                    iconSrc2 = "assets/Icons/reports_filled.svg";
+                    iconSrc3 = "assets/Icons/truck.svg";
                   });
                 },
                 title: "Reports",
-                iconSrc: "assets/Icons/Reports.svg",
+                iconSrc: iconSrc2, //"assets/Icons/Reports.svg"
                 isActive: btn2,
                 // itemCount: 3,
               ),
@@ -155,10 +165,13 @@ class _SideMenuState extends State<SideMenu> {
                     btn2 = false;
                     btn3 = true;
                     btn4 = false;
+                    iconSrc1 = "assets/Icons/works.svg";
+                    iconSrc2 = "assets/Icons/reports.svg";
+                    iconSrc3 = "assets/Icons/truck_filled.svg";
                   });
                 },
                 title: "Material",
-                iconSrc: "assets/Icons/Material.svg",
+                iconSrc: iconSrc3,
                 isActive: btn3,
               ),
               SideMenuItem(
@@ -168,6 +181,9 @@ class _SideMenuState extends State<SideMenu> {
                     btn2 = false;
                     btn3 = false;
                     btn4 = true;
+                    iconSrc1 = "assets/Icons/works.svg";
+                    iconSrc2 = "assets/Icons/reports.svg";
+                    iconSrc3 = "assets/Icons/truck.svg";
                   });
                 },
                 title: "Staff",
