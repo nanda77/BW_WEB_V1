@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:outlook/models/Email.dart';
-import 'package:outlook/responsive.dart';
+import 'package:buildworks/models/Email.dart';
+import 'package:buildworks/responsive.dart';
 // import 'package:websafe_svg/websafe_svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -57,21 +57,21 @@ class Header extends StatelessWidget {
           ),
           Spacer(),
           // We don't need print option on mobile
-          if (Responsive.isDesktop(context))
-            // IconButton(
-            //   icon: SvgPicture.asset(
-            //     "assets/Icons/Printer.svg",
-            //     width: 24,
-            //   ),
-            //   onPressed: () {},
-            // ),
-            IconButton(
-              icon: SvgPicture.asset(
-                "assets/Icons/edit_work.svg",
-                width: 21,
-              ),
-              onPressed: () {},
+          // if (Responsive.isDesktop(context))
+          // IconButton(
+          //   icon: SvgPicture.asset(
+          //     "assets/Icons/Printer.svg",
+          //     width: 24,
+          //   ),
+          //   onPressed: () {},
+          // ),
+          IconButton(
+            icon: SvgPicture.asset(
+              "assets/Icons/edit_work.svg",
+              width: 21,
             ),
+            onPressed: () {},
+          ),
           IconButton(
             icon: SvgPicture.asset(
               "assets/Icons/dots3.svg",

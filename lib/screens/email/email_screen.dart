@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:outlook/models/Email.dart';
+import 'package:buildworks/models/Email.dart';
 // import 'package:websafe_svg/websafe_svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -32,10 +32,11 @@ class EmailScreen extends StatelessWidget {
               Divider(thickness: 1),
               Expanded(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.all(kDefaultPadding),
+                  // padding: EdgeInsets.all(kDefaultPadding),
                   child: Column(
                     children: [
                       WorkUpdate(),
+                      Divider(thickness: 1),
                       SizedBox(height: kDefaultPadding),
                       WorkUpdate(),
                     ],
@@ -58,6 +59,7 @@ class WorkUpdate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(kDefaultPadding),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -67,6 +69,7 @@ class WorkUpdate extends StatelessWidget {
           //   backgroundImage: AssetImage(emails[1].image),
           // ),
           SizedBox(width: kDefaultPadding),
+
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,7 +152,7 @@ class WorkUpdate extends StatelessWidget {
                         Divider(thickness: 1),
                         SizedBox(height: kDefaultPadding / 2),
                         SizedBox(
-                          height: 420,
+                          height: 400,
                           child: StaggeredGridView.countBuilder(
                             physics: NeverScrollableScrollPhysics(),
                             crossAxisCount: 4,
