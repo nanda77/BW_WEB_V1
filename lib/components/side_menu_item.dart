@@ -6,21 +6,23 @@ import '../constants.dart';
 import 'counter_badge.dart';
 
 class SideMenuItem extends StatelessWidget {
-  const SideMenuItem({
+  SideMenuItem({
     Key key,
     this.isActive,
     this.isHover = false,
     this.itemCount,
     this.showBorder = true,
-    @required this.iconSrc,
-    @required this.title,
-    @required this.press,
+    this.iconSrc,
+    this.title,
+    this.press,
   }) : super(key: key);
 
-  final bool isActive, isHover, showBorder;
+  final bool isHover, showBorder;
+  final bool isActive;
   final int itemCount;
   final String iconSrc, title;
   final VoidCallback press;
+  // final Function(int) onTap;
 
   @override
   Widget build(BuildContext context) {

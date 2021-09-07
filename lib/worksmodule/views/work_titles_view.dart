@@ -31,6 +31,7 @@ class _WorkTitlesViewState extends State<WorkTitlesView> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final WorkTitlesController workTitlesController =
       Get.put(WorkTitlesController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
