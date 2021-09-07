@@ -25,6 +25,7 @@ class ListOfEmails extends StatefulWidget {
 
 class _ListOfEmailsState extends State<ListOfEmails> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

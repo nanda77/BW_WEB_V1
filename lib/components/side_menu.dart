@@ -1,7 +1,10 @@
+import 'package:buildworks/screens/main/main_screen.dart';
+import 'package:buildworks/worksmodule/views/work_titles_view.dart';
 import 'package:flutter/material.dart';
 import 'package:buildworks/responsive.dart';
 // import 'package:websafe_svg/websafe_svg.dart'; SvgPicture
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 
 import '../constants.dart';
 import '../extensions.dart';
@@ -11,23 +14,26 @@ import 'tags.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class SideMenu extends StatefulWidget {
-  const SideMenu({
-    Key key,
-  }) : super(key: key);
+  final int selectedIndex;
+
+  const SideMenu({Key key, this.selectedIndex = 0}) : super(key: key);
 
   @override
-  _SideMenuState createState() => _SideMenuState();
+  SideMenuState createState() => SideMenuState();
 }
 
-class _SideMenuState extends State<SideMenu> {
+class SideMenuState extends State<SideMenu> {
   bool btn1 = true;
   bool btn2 = false;
   bool btn3 = false;
   bool btn4 = false;
+  int selectedIndex = 0;
   var currentState = "";
   String iconSrc1 = "assets/Icons/works_filled.svg";
   String iconSrc2 = "assets/Icons/Reports.svg";
   String iconSrc3 = "assets/Icons/truck.svg";
+  Function() notifyParent;
+
   moveReports(BuildContext context) {}
 
   @override
@@ -46,19 +52,6 @@ class _SideMenuState extends State<SideMenu> {
         borderRadius: BorderRadius.circular(10),
       ),
     );
-    // final ButtonStyle flatButtonStyle2 = TextButton.styleFrom(
-    //   minimumSize: Size(
-    //     double.infinity,
-    //     double.minPositive,
-    //   ),
-    //   backgroundColor: Color(0xFFEBEDFA),
-    //   padding: EdgeInsets.symmetric(
-    //     vertical: kDefaultPadding,
-    //   ),
-    //   shape: RoundedRectangleBorder(
-    //     borderRadius: BorderRadius.circular(10),
-    //   ),
-    // );
 
     return Container(
       decoration: BoxDecoration(
@@ -134,13 +127,19 @@ class _SideMenuState extends State<SideMenu> {
                     iconSrc1 = "assets/Icons/works_filled.svg";
                     iconSrc2 = "assets/Icons/reports.svg";
                     iconSrc3 = "assets/Icons/truck.svg";
+                    selectedIndex = 0;
+                    print(selectedIndex);
+
+                    // SideMenu(selectedIndex: 0);
                   });
                 },
                 title: "Works",
                 iconSrc: iconSrc1,
                 isActive: btn1,
+
                 // itemCount: 3,
               ),
+
               SideMenuItem(
                 press: () {
                   setState(() {
@@ -151,11 +150,17 @@ class _SideMenuState extends State<SideMenu> {
                     iconSrc1 = "assets/Icons/works.svg";
                     iconSrc2 = "assets/Icons/reports_filled.svg";
                     iconSrc3 = "assets/Icons/truck.svg";
+                    selectedIndex = SideMenu(selectedIndex: 1).selectedIndex;
+
+                    print(selectedIndex);
+
+                    // SideMenu(selectedIndex: 1);
                   });
                 },
                 title: "Reports",
                 iconSrc: iconSrc2, //"assets/Icons/Reports.svg"
                 isActive: btn2,
+
                 // itemCount: 3,
               ),
               SideMenuItem(
