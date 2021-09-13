@@ -25,6 +25,7 @@ class LandingPage extends StatelessWidget {
           LandingSection2(),
           SizedBox(height: kDefaultPadding * 2),
           LandingSection3(),
+          SizedBox(height: kDefaultPadding / 2),
           Footer(),
         ],
       )),

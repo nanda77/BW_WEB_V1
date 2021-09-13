@@ -35,7 +35,7 @@ class Footer extends StatelessWidget {
                     style: GoogleFonts.montserrat(
                         fontSize: 42,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF282F3F).withOpacity(0.77)),
+                        color: Color(0xFF282F3F).withOpacity(0.97)),
                   ),
                 ),
                 Container(
