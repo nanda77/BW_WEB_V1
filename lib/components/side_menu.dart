@@ -10,8 +10,12 @@ import '../constants.dart';
 import '../extensions.dart';
 import 'side_menu_item.dart';
 import 'tags.dart';
+import 'dart:async';
+import 'package:get/get.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
+
+StreamController<int> streamController = StreamController<int>();
 
 class SideMenu extends StatefulWidget {
   final int selectedIndex;
@@ -28,6 +32,7 @@ class SideMenuState extends State<SideMenu> {
   bool btn3 = false;
   bool btn4 = false;
   int selectedIndex = 0;
+  int index = 0;
   var currentState = "";
   String iconSrc1 = "assets/Icons/works_filled.svg";
   String iconSrc2 = "assets/Icons/Reports.svg";
@@ -128,10 +133,10 @@ class SideMenuState extends State<SideMenu> {
                     iconSrc2 = "assets/Icons/reports.svg";
                     iconSrc3 = "assets/Icons/truck.svg";
                     selectedIndex = 0;
+                    index = 0;
                     print(selectedIndex);
-
-                    // SideMenu(selectedIndex: 0);
                   });
+                  // streamController.add(index);
                 },
                 title: "Works",
                 iconSrc: iconSrc1,
@@ -151,11 +156,11 @@ class SideMenuState extends State<SideMenu> {
                     iconSrc2 = "assets/Icons/reports_filled.svg";
                     iconSrc3 = "assets/Icons/truck.svg";
                     selectedIndex = SideMenu(selectedIndex: 1).selectedIndex;
-
+                    index = 1;
                     print(selectedIndex);
-
                     // SideMenu(selectedIndex: 1);
                   });
+                  // streamController.add(selectedIndex);
                 },
                 title: "Reports",
                 iconSrc: iconSrc2, //"assets/Icons/Reports.svg"
@@ -174,6 +179,7 @@ class SideMenuState extends State<SideMenu> {
                     iconSrc2 = "assets/Icons/reports.svg";
                     iconSrc3 = "assets/Icons/truck_filled.svg";
                   });
+                  // streamController.add(selectedIndex);
                 },
                 title: "Material",
                 iconSrc: iconSrc3,

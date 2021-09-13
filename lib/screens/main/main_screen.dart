@@ -5,9 +5,14 @@ import 'package:buildworks/components/side_menu.dart';
 import 'package:buildworks/responsive.dart';
 import 'package:buildworks/screens/email/email_screen.dart';
 import 'components/list_of_emails.dart';
+import 'dart:async';
+import 'package:get/get.dart';
+
+StreamController<int> streamController = StreamController<int>();
 
 class MainScreen extends StatefulWidget {
   final SideMenu sideMenu;
+  // final Stream<int> stream;
 
   const MainScreen({Key key, this.sideMenu}) : super(key: key);
 
@@ -16,7 +21,18 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
+  int _selectedIndex = SideMenu().selectedIndex;
+  Widget screen = WorkTitlesView();
+
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   widget.stream.listen((_selectedIndex) {
+  //     mySetState(_selectedIndex);
+  //     print(_selectedIndex);
+  //   });
+  // }
+
   final List<Widget> _screens = [
     WorkTitlesView(),
     Scaffold(),
@@ -24,6 +40,12 @@ class _MainScreenState extends State<MainScreen> {
     Scaffold(),
     Scaffold(),
   ];
+  // @override
+  // void mySetState(int _selectedIndex) {
+  //   setState(() {
+  //     screen = _screens[_selectedIndex];
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +82,7 @@ class _MainScreenState extends State<MainScreen> {
             Expanded(
               flex: _size.width > 1340 ? 3 : 5,
               child: _screens[SideMenuState().selectedIndex],
+              // child: _screens[SideMenuState().selectedIndex],
             ),
 
             Expanded(

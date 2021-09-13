@@ -1,6 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 // import 'package:buildworks/constants.dart';
 import 'package:buildworks/screens/main/main_screen.dart';
+
+import 'landingpage/views/landing_page.dart';
+
+StreamController<int> streamController = StreamController<int>();
 
 void main() {
   runApp(MyApp());
@@ -14,7 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'BuildWorks WebApp',
       theme: ThemeData(),
-      home: MainScreen(),
+      // home: MainScreen(),
+      home: LandingPage(),
     );
   }
 }
