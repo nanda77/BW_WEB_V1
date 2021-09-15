@@ -15,7 +15,7 @@ class LandingSection3 extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       constraints: BoxConstraints(maxHeight: 620, minHeight: 500),
-      margin: EdgeInsets.only(left: 100, right: 100, top: 100),
+      margin: EdgeInsets.only(left: 100, right: 100, top: 50),
       // width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -39,7 +39,7 @@ class LandingSection3 extends StatelessWidget {
                   margin:
                       EdgeInsets.only(left: 50, right: 70, bottom: 20, top: 70),
                   child: Text(
-                    "Save upto 47% in project costs",
+                    "Save upto 42% in project costs",
                     style: GoogleFonts.montserrat(
                         fontSize: 42,
                         fontWeight: FontWeight.bold,
