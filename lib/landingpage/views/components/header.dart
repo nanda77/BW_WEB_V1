@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
       child: Container(
         color: Colors.transparent,
         child: Padding(
-          padding: EdgeInsets.only(left: 80, right: 0),
+          padding: EdgeInsets.only(left: 80, right: 10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -83,7 +83,7 @@ class Header extends StatelessWidget {
 
                         TextButton.icon(
                           icon: Image.asset("assets/images/login.png",
-                              height: 77),
+                              height: 67),
                           label: Text(""),
                           onPressed: StoreUrls().playStoreURL,
                         ),
