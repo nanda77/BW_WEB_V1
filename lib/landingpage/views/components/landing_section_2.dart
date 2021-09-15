@@ -16,14 +16,37 @@ class _LandingSection2State extends State<LandingSection2> {
   CarouselController buttonCarouselController = CarouselController();
   int _current = 0;
   List imgList = [
-    'assets/images/project_creation.gif', //
-    'assets/images/add_work_title.gif',
-    'assets/images/add_update.gif',
-    'assets/images/material.gif',
-    'assets/images/material_wt.gif',
-    'assets/images/360.gif',
+    'assets/images/add_project.gif', //project_creation
+    'assets/images/add_work.gif', //add_work_title
+    'assets/images/quick_update.gif', //add_update //normal_update //quick_update
+    'assets/images/reports_signed.gif', //
+    'assets/images/add_material.gif', //material
+    'assets/images/add_usage.gif', //material_wt
+    'assets/images/360_add.gif', //360
     'assets/images/attendance.gif',
     'assets/images/location.gif'
+  ];
+  List<String> stringList1 = [
+    'Step 1', //
+    'Step 2',
+    'Step 3',
+    'Step 4',
+    'Step 5',
+    'Step 6',
+    'Step 7',
+    'Step 8',
+    'Step 9'
+  ];
+  List<String> stringList2 = [
+    'How to create a project?', //
+    'How to add works under a project?',
+    'Adding daily updates under a work?',
+    'Downloading signed pdf work reports?',
+    'How to add materials under a project?',
+    'Linking material usage to a work?',
+    'Adding a 360° image of the site?',
+    'Maintaining staff attendance?',
+    "Tracking staff's location on site?"
   ];
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
@@ -41,13 +64,6 @@ class _LandingSection2State extends State<LandingSection2> {
       height: MediaQuery.of(context).size.height,
       constraints: BoxConstraints(maxHeight: 720, minHeight: 500),
       margin: EdgeInsets.only(left: 100, right: 100, top: 50),
-      // width: double.infinity,
-      // decoration: BoxDecoration(
-      //   image: DecorationImage(
-      //     fit: BoxFit.fill,
-      //     image: AssetImage("assets/images/bg3.png"),
-      //   ),
-      // ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.max,
@@ -60,7 +76,7 @@ class _LandingSection2State extends State<LandingSection2> {
                 Container(
                   alignment: Alignment.bottomLeft,
                   child: Text(
-                    "Step 1",
+                    "${stringList1[_current]}",
                     style: GoogleFonts.montserrat(
                         fontSize: 42,
                         fontWeight: FontWeight.w900,
@@ -69,7 +85,7 @@ class _LandingSection2State extends State<LandingSection2> {
                 ),
                 Container(
                   child: Text(
-                    "How to create a project?",
+                    "${stringList2[_current]}",
                     style: GoogleFonts.montserrat(
                         fontSize: 42,
                         fontWeight: FontWeight.bold,
