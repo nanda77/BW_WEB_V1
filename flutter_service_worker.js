@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "e766b3ae2926a29d94af67bfe46ea5eb",
-"index.html": "7077ce4218bf7520d9ead5ffe681685c",
-"/": "7077ce4218bf7520d9ead5ffe681685c",
-"main.dart.js": "7370f524804bddf22747ec9fafa5040f",
+"index.html": "7884a93335641f02d1424bb64426992e",
+"/": "7884a93335641f02d1424bb64426992e",
+"main.dart.js": "d6d11a5558c69c57335f9ad4a898033a",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
@@ -59,6 +59,7 @@ const RESOURCES = {
 "assets/assets/Icons/Search.svg": "c7155466276712980bdf822025286c58",
 "assets/assets/Icons/PlusCircle.svg": "3c91d58c6c9dd9d724c7f417d421f0ea",
 "assets/assets/Icons/Add_members.svg": "5bfd4ddea559936c039ec6ccb6aa81d5",
+"assets/assets/Icons/Works.svg": "32bdfbccaa34caebe97879c162305727",
 "assets/assets/Icons/Reply.svg": "378c21add4d4219e7969f647a2ea15be",
 "assets/assets/Icons/Markup%2520filled.svg": "40d059b79ceb381a4fff5cf4f94d7717",
 "assets/assets/Icons/edit_work.svg": "8a5963375dc06e5e38ab410519f27e1b",
