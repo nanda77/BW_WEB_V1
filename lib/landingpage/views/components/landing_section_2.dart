@@ -181,7 +181,7 @@ class _LandingSection2State extends State<LandingSection2> {
                                 borderRadius: BorderRadius.circular(20)),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
+                              child: Image.asset(
                                 imgUrl,
                                 fit: BoxFit.fill,
                               ),
