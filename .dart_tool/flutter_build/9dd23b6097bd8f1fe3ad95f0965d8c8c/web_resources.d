@@ -1,0 +1,1 @@
+ build/web/index.html build/web/favicon.png build/web/icons/Icon-192.png build/web/icons/Icon-512.png build/web/manifest.json:  /Users/NANDA/Downloads/BW_v1/web/index.html /Users/NANDA/Downloads/BW_v1/web/favicon.png /Users/NANDA/Downloads/BW_v1/web/icons/Icon-192.png /Users/NANDA/Downloads/BW_v1/web/icons/Icon-512.png /Users/NANDA/Downloads/BW_v1/web/manifest.json
