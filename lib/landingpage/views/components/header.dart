@@ -8,17 +8,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 
-_playStoreURL() async {
-  const url =
-      'https://play.google.com/store/apps/details?id=com.medinin.buildworks';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
+class Header extends StatefulWidget {
+  @override
+  _HeaderState createState() => _HeaderState();
 }
 
-class Header extends StatelessWidget {
+class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
