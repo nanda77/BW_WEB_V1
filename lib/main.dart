@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Responsive(
       desktop: LandingPage(),
-      tablet: LandingPage(),
+      tablet: SmallLandingPage(),
       mobile: SmallLandingPage(),
     );
   }

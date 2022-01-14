@@ -15,7 +15,7 @@ class SmallLandingSection1 extends StatelessWidget {
       // width: MediaQuery.of(context).size.width,
       // height: MediaQuery.of(context).size.height,
       constraints: BoxConstraints(maxHeight: 570, minHeight: 400),
-      margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+      margin: EdgeInsets.only(left: 20, right: 20, top: 30),
       // width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -55,7 +55,7 @@ class SmallLandingSection1 extends StatelessWidget {
                   width: 450,
                   constraints: BoxConstraints(maxWidth: 450),
                   // alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(bottom: 70),
+                  margin: EdgeInsets.only(bottom: 40),
                   // width: 496,
                   child: Text(
                     "Construction, \nArchitecture & \nInterior Projects",
