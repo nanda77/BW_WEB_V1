@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'BuildWorks WebApp',
-      theme: ThemeData(),
+      title: 'BuildWorks',
+      theme: ThemeData(visualDensity: VisualDensity.adaptivePlatformDensity),
       // home: MainScreen(),
       home: HomePage(),
     );
